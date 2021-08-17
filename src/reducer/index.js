@@ -5,7 +5,7 @@ const initialState = {
     toDoList:[]
 };
 
-export default function reducer(state=initialState,action){
+export default function toDoApp(state=initialState,action){
   
    switch (action.type) {
      case ADD_TODO :
@@ -13,10 +13,8 @@ export default function reducer(state=initialState,action){
         ...state,
         toDoList: [...state.toDoList, {...action.toDoItem}]
        }
-       break;
-   
      default:
-     return start;
+     return state;
    }
 
 }
