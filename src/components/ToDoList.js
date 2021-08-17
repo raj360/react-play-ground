@@ -11,7 +11,7 @@ const ToDoList = ({toDoList}) => {
      <Jumbotron>
          <ListGroup>
             {
-             toDoList.map((todo,index)) => <ToDo key = index {...todo} />;
+             toDoList.map((todo,index)=> (<ToDo key = {index} {...todo} />))
             }
         </ListGroup>
      </Jumbotron>
@@ -19,7 +19,7 @@ const ToDoList = ({toDoList}) => {
 
 };
 
-ToDoList.PropTypes = {
+ToDoList.propTypes = {
  toDoList: PropTypes.arrayOf(
           PropTypes.shape({
           _id: PropTypes.number,

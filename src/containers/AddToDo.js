@@ -2,10 +2,10 @@ import React from "react";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import InputGroup  from "react-bootstrap/InputGroup";
-import { addTodo } from "../actions";
 import {connect} from 'react-redux';
+import {addToDo} from '../actions'
 
-const AddToDo = ({dispatch}) => {
+let AddToDo = ({dispatch}) => {
 
  let input;
  
@@ -23,6 +23,22 @@ const AddToDo = ({dispatch}) => {
          input.value = ''
       }}
    >
+   
+   <Form.Group controlId="formBasicEmail" >
+        <InputGroup>
+              <Form.Control
+               type="text"
+               placeholder="Enter an Item"
+               ref = { node => { 
+                   input = node
+               }}
+              />
+              
+        <InputGroup.Append>
+               <Button type="submit" >Add ToDo</Button>
+        </InputGroup.Append>      
+        </InputGroup>
+   </Form.Group>
    
    </Form>
  )

@@ -1,7 +1,7 @@
 
 export const ADD_TODO =  'ADD_TODO';
 
-export function addTodo(title){
+export function addToDo(title){
 
   return {
     type:ADD_TODO,
