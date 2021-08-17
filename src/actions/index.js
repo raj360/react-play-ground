@@ -5,8 +5,8 @@ export function addTodo(title){
 
   return {
     type:ADD_TODO,
-   toDoItem:{
-   _id:(new Date().getTime()),
-   title
+     toDoItem:{
+     _id:(new Date().getTime()),
+     title
   }}
 }
