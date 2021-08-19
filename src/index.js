@@ -8,6 +8,7 @@ import reportWebVitals from './reportWebVitals';
 import {loadToDoList} from './actions';
 import rootSaga from './sagas';
 import createSagaMiddle from 'redux-saga';
+import {BrowserRouter} from 'react-router-dom';
 
 
 const sagaMiddleware = createSagaMiddle();
@@ -20,7 +21,9 @@ store.dispatch(loadToDoList());
 
 ReactDOM.render(
    <Provider store={store}>
-     <App />
+        <BrowserRouter>
+               <App />
+        </BrowserRouter>
    </Provider>
    ,
   document.getElementById('root')
