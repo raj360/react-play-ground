@@ -5,15 +5,17 @@ import {createStore,applyMiddleware} from 'redux';
 import toDoApp from './reducer';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {LOAD_TODO_LIST} from './actions';
+import {loadToDoList} from './actions';
 import rootSaga from './sagas';
 import createSagaMiddle from 'redux-saga';
 
-const sagaMiddleware = createSagaMiddle()
+const sagaMiddleware = createSagaMiddle();
 
 const store = createStore(toDoApp,applyMiddleware(sagaMiddleware));
 
 sagaMiddleware.run(rootSaga);
+
+store.dispatch(loadToDoList());
 
 ReactDOM.render(
    <Provider store={store}>

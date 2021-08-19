@@ -16,7 +16,7 @@ export default function toDoApp(state=initialState,action){
      case RENDER_TODO_LIST:
      return {
        ...state,
-       toDoApp:action.toDoList,
+       toDoList:action.toDoList,
      };
      default:
      return state;
