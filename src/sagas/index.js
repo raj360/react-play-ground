@@ -3,11 +3,6 @@ import {LOAD_TODO_LIST,RENDER_TODO_LIST} from '../actions'
 
 
 export function *fetchToDoList(){
-
-}
-
-
-export function *loadToDoList(){
   const endpoint = 'https://gist.githubusercontent.com/brunokrebs/f1cacbacd53be83940e1e85860b6c65b/raw/to-do-items.json';
   const response = yield call(fetch,endpoint);
   const data = yield response.json();
@@ -15,6 +10,13 @@ export function *loadToDoList(){
 }
 
 
-export function *rootSaga() {
-   
+export function *loadToDoList(){
+
 }
+
+
+
+
+export function *rootSaga() {
+  
+} 
