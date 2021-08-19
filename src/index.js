@@ -13,6 +13,8 @@ const sagaMiddleware = createSagaMiddle()
 
 const store = createStore(toDoApp,applyMiddleware(sagaMiddleware));
 
+sagaMiddleware.run(rootSaga);
+
 ReactDOM.render(
    <Provider store={store}>
      <App />
