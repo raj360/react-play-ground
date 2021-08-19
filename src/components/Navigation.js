@@ -4,8 +4,8 @@ import {Link} from 'react-router-dom';
 
 export default () => (
     <div>
-        <Link exact path="/" className = "btn btn-primary" > ToDo List</Link>
+        <Link  to="/" className = "btn btn-primary" > To-Do List</Link>
       
-        <Link  path="/new-item"  className="btn btn-secondary"> + Add ToDo</Link>
+        <Link  to="/new-item"  className="btn btn-secondary"> + Add New</Link>
     </div>
 )
