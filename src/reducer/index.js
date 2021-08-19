@@ -17,8 +17,7 @@ export default function toDoApp(state=initialState,action){
      return {
        ...state,
        toDoApp:action.toDoList,
-     }
-       
+     };
      default:
      return state;
    }

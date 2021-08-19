@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import {createStore} from 'redux';
+import {createStore,applyMiddleware} from 'redux';
 import toDoApp from './reducer';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {LOAD_TODO_LIST} from './actions';
+import rootSaga from './sagas';
+import createSagaMiddle from 'redux-saga';
 
-const store = createStore(toDoApp)
+const store = createStore(toDoApp);
 
 ReactDOM.render(
    <Provider store={store}>
