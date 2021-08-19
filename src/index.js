@@ -9,11 +9,13 @@ import {loadToDoList} from './actions';
 import rootSaga from './sagas';
 import createSagaMiddle from 'redux-saga';
 import {BrowserRouter} from 'react-router-dom';
+import { createLogger } from 'redux-logger';
 
+const logger = createLogger();
 
 const sagaMiddleware = createSagaMiddle();
 
-const store = createStore(toDoApp,applyMiddleware(sagaMiddleware));
+const store = createStore(toDoApp,applyMiddleware(sagaMiddleware,logger));
 
 sagaMiddleware.run(rootSaga);
 

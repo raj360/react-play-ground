@@ -16,7 +16,7 @@ export function *parseHash(){
 };
 
 export function *handleAuthenticationCallBack() {
-  yield takeLatest(HANDLE_AUTHENTICATION_CALLBACK,parseHash)
+  yield takeLatest(HANDLE_AUTHENTICATION_CALLBACK,parseHash);
 };
 
 export function *loadToDoList(){

@@ -21,7 +21,7 @@ export default function toDoApp(state=initialState,action){
      };
      case USER_PROFILE_LOADED:
      return {
-     state,
+     ...state,
      user:action.user
      };
      default:

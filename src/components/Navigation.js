@@ -23,16 +23,16 @@ export default ({user}) => (
         {!user && (<Button onClick = {signIn} style={{marginLeft: 10}} >Sign In</Button>)}
         
         {
-        user && (
-              <>
-                <Button onClick = {signOut} style={{marginRight: 10}} >Sign Out </Button>
-                
-                <Profile>
-                    <ProfileImage src={user.profile.picture} />
-                    {user.profile.email}
-                </Profile>
-              </>
-        )
+          user && (
+                <>
+                  <Button onClick = {signOut} style={{marginRight: 10,marginLeft: 10}} >Sign Out </Button>
+                  
+                  <Profile>
+                      <ProfileImage src={user.profile.picture} />
+                      {user.profile.email}
+                  </Profile>
+                </>
+          )
         }
         
     </div>
