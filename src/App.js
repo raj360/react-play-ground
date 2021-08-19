@@ -11,12 +11,13 @@ function App() {
      <Container>
         <Row className="row">
              <Col xl={12}>
-                  <h1>To Do list</h1>
+                  <h1>To Do App</h1>
                    <Navigation/>
-                   
-                   <Route exact path="/"  components={ToDoListContainer} />
-                   <Route exact path="/new-item"  components={AddToDo} />
-                   
+                  
+                   <div className="p-2">
+                     <Route exact path="/"  component={ToDoListContainer} />
+                      <Route  path="/new-item"  component={AddToDo} /> 
+                   </div> 
              </Col>
         </Row>
      </Container>
