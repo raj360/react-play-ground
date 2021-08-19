@@ -1,8 +1,9 @@
-import { ADD_TODO,RENDER_TODO_LIST} from "../actions";
+import { ADD_TODO,RENDER_TODO_LIST,USER_PROFILE_LOADED} from "../actions";
 
 
 const initialState = {
-    toDoList:[]
+    toDoList:[],
+    user:null
 };
 
 export default function toDoApp(state=initialState,action){
@@ -18,6 +19,11 @@ export default function toDoApp(state=initialState,action){
        ...state,
        toDoList:action.toDoList,
      };
+     case USER_PROFILE_LOADED:
+     return {
+     state,
+     user:action.user
+     }
      default:
      return state;
    }
