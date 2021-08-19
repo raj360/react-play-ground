@@ -3,8 +3,8 @@ import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import AddToDo from '../src/containers/AddToDo';
 import ToDoListContainer from './containers/ToDoListContainter';
-import Navigation from './components/Navigation';
 import {Route} from 'react-router-dom';
+import NavigationContainer from './containers/NavigationContainer';
 
 
 
@@ -15,7 +15,7 @@ function App() {
         <Row className="row">
              <Col xl={12}>
                   <h1>To Do App</h1>
-                   <Navigation/>
+                  <NavigationContainer />
                   
                    <div className="p-2">
                      <Route exact path="/"  component={ToDoListContainer} />
