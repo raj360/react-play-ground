@@ -9,7 +9,9 @@ import {LOAD_TODO_LIST} from './actions';
 import rootSaga from './sagas';
 import createSagaMiddle from 'redux-saga';
 
-const store = createStore(toDoApp);
+const sagaMiddleware = createSagaMiddle()
+
+const store = createStore(toDoApp,applyMiddleware(sagaMiddleware));
 
 ReactDOM.render(
    <Provider store={store}>
