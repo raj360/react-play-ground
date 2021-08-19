@@ -5,6 +5,9 @@ export const LOAD_TODO_LIST= 'LOAD_TODO_LIST';
 
 export const RENDER_TODO_LIST = 'RENDER_TODO_LIST';
 
+export const HANDLE_AUTHENTICATION_CALLBACK = 'HANDLE_AUTHENTICATION_CALLBACK';
+export const USER_PROFILE_LOADED = 'USER_PROFILE_LOADED';
+
 export function addToDo(title){
 
   return {
