@@ -11,12 +11,10 @@ export function *fetchToDoList(){
 
 
 export function *loadToDoList(){
-
+  yield takeEvery(LOAD_TODO_LIST,fetchToDoList);
 }
 
 
-
-
 export function *rootSaga() {
-  
+  yield all([loadToDoList()]);
 } 
